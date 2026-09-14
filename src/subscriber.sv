@@ -25,7 +25,7 @@ class subscriber extends uvm_subscriber#(seq_item);
             bins high_byte     = {4'b1000};
             bins half_low      = {4'b0011};
             bins half_high     = {4'b1100};
-            bins none          = {4'b0000};   // ← often missed!
+            bins none          = {4'b0000};   
             bins others[]      = default;
         }
     endgroup
@@ -34,7 +34,7 @@ class subscriber extends uvm_subscriber#(seq_item);
     covergroup cg_bresp;
         cp_bresp: coverpoint tr.BRESP {
             bins okay   = {2'b00};
-        //    bins exokay = {2'b01};   may be unused
+        //    bins exokay = {2'b01};   
             bins slverr = {2'b10};
             bins decerr = {2'b11};
         }
